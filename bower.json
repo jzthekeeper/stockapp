@@ -1,0 +1,27 @@
+{
+  "name": "stockapp",
+  "version": "0.0.1",
+  "dependencies": {
+    "backbone.marionette": "~2.3.1",
+    "jquery": "<2.0.0"
+  },
+  "authors": [
+    "jz <jzthekeeper@126.com>"
+  ],
+  "description": "a stock web site",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "stock"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}
