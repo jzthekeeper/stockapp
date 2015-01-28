@@ -26,9 +26,14 @@ require.config({
   }
 });
 
-require(['app', 'jquery', 'backbone', 'marionette', 'bootstrap'], 
-    function (app, $, Backbone, Marionette) {//fix: bootstrap export $, but in arguments is nothing, put it as last argument
-        'use strict';
-
-
+require(['app', 'jquery', 'backbone', 'marionette', 
+  'routers/home.router',
+  'controllers/home.controller', 'bootstrap'], 
+  function (app, $, Backbone, Marionette, HomeRouter, homeController) {//fix: bootstrap export $, but in arguments is nothing, put it as last argument
+    'use strict';
+    app.start();
+    var homeRouter = new HomeRouter({
+      controller: homeController 
+    });
+    Backbone.history.start();
 });
