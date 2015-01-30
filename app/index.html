@@ -7,15 +7,19 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="bower_components/backbone-modal/backbone.modal.css">
-        <link rel="stylesheet" href="bower_components/backbone-modal/backbone.modal.theme.css">
-        <link rel="stylesheet" href="styles/main.css">
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
 
-        <!-- build:css bower_components/bootstrap/dist/css/bootstrap.css -->
+        <!-- build:css styles/vendor.css -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bower_components/backbone-modal/backbone.modal.css">
+        <link rel="stylesheet" href="bower_components/backbone-modal/backbone.modal.theme.css">
+        <!-- endbuild -->
+
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="styles/home.css">
+        <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
     </head>
     <body>
@@ -108,24 +112,15 @@ var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
  s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
 
+        <!-- build:js scripts/vendor.js -->
+        <script src="scripts/vendor/fastclick.js"></script>
+        <script src="scripts/vendor/fastclick.example.js"></script>
+        <script src="scripts/vendor/async.localStorage.js"></script>
+        <script src="scripts/vendor/async.localStorage.examples.js"></script>
+        <!-- endbuild -->
+
         <!-- build:js scripts/main.js -->
         <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
-        <!-- endbuild -->
-
-        <!-- build:js scripts/async-local-storage.js -->
-        <script src="scripts/async.localStorage.js"></script>
-        <script src="scripts/async.localStorage.examples.js"></script>
-        <!-- endbuild -->
-
-        <!-- build:js scripts/fullscreensnippet.js -->
-        <!--  
-        <script src="scripts/fullscreensnippet.js"></script>
-        -->
-        <!-- endbuild -->
-
-        <!-- build:js scripts/fastclick.js -->
-        <script src="scripts/fastclick.js"></script>
-        <script src="scripts/fastclick.example.js"></script>
         <!-- endbuild -->
 </body>
 </html>
