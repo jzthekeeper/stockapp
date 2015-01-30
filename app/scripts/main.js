@@ -5,7 +5,8 @@ require.config({
     marionette: '../bower_components/backbone.marionette/lib/backbone.marionette',
     jquery: '../bower_components/jquery/dist/jquery',
     bootstrap: '../bower_components/bootstrap/dist/js/bootstrap',
-    modal: '../bower_components/backbone-modal/backbone.modal',
+    'backbone.modal': '../bower_components/backbone-modal/backbone.modal',
+    'backbone.marionette.modals': '../bower_components/backbone-modal/backbone.marionette.modals',
     text: '../bower_components/requirejs-text/text',
   },
   shim: {
