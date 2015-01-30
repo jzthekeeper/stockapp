@@ -2,6 +2,7 @@
 define(function (require) {
   return {
     loginModalTpl: require('text!../templates/modal-login.html'),
+    signUpModalTpl: require('text!../templates/modal-signup.html')
   };
 });
 

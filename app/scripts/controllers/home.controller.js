@@ -1,18 +1,28 @@
-define(['../templates', 'modal'], function (templates) {
+define(['../templates', 'modal', '../app'], function (templates, Modal, app) {
   return {
     openLoginModal: function() {
       //$(templates.loginModalTpl).modal();
       var Modal = Backbone.Modal.extend({
         template: _.template(templates.loginModalTpl),
         events: {
-          'click .bbm-button': 'close'
+          'click .bbm-button': 'signUp'
         },
-        close: function() {
-          this.triggerCancel();
+        signUp: function() {
+            var SignUpModal = Backbone.Modal.extend({
+                template: _.template(templates.signUpModalTpl),
+                events: {
+                    'click .bbm-button.submit': 'submitRegister'
+                },
+                submitRegister: function() {
+                    this.triggerSubmit();
+                }
+            });
+            var signUpModalView = new SignUpModal();
+            app.modalRegion.show(signUpModalView);
         }
       });
       var modalView = new Modal();
-      $('.login').html(modalView.render().el);
+      app.modalRegion.show(modalView);
     }  
   };
 });

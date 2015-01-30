@@ -1,5 +1,9 @@
 /*global define */
 define(['marionette'], function (Marionette) {
     'use strict';
-    return new Marionette.Application();
+    var stockApp = new Marionette.Application();
+    stockApp.addRegions({
+        modalRegion: '.modal-region'
+    });
+    return stockApp;
 });
